@@ -7,6 +7,7 @@ class Table
   float dontPassBar;
 
 public:
+  Table();
   float getPassLine();
   void betPassLine(float);
   float getDontPassBar();

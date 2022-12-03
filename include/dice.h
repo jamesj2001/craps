@@ -7,6 +7,7 @@ class Dice
     int die2;
 
   public:
+    Dice();
     void roll();
     void printDice();
     int getDice();

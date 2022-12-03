@@ -26,9 +26,12 @@ int main(int argc, char* argv[])
   srand(time(0));  
   char option = ' ';
   Dice* dice = new Dice();
+  int roll;
   bool pointOn = 0;
   int point;
   float bank;
+  float amt;
+  int betOption;
   Table* table = new Table();
   enum BET {passLine = 0, 
             dontPassBar = 1};
@@ -48,7 +51,7 @@ int main(int argc, char* argv[])
       case 'a':
       case 'A':
         dice -> roll();
-        int roll = dice -> getDice();
+        roll = dice -> getDice();
 
         if (pointOn)
         {
@@ -106,7 +109,7 @@ int main(int argc, char* argv[])
           else if (roll == 12)
           {
              if (table -> getPassLine() > 0)
-               {table -> clear(0)}
+               {table -> clear(0);}
 
              if (table -> getDontPassBar() > 0)
              {
@@ -125,7 +128,6 @@ int main(int argc, char* argv[])
 
       case 'b':
       case 'B':
-        int betOption = 0;
         printAvailableBets();
         cout << "Bet Type:";
         cin >> betOption;
@@ -133,7 +135,6 @@ int main(int argc, char* argv[])
         switch(betOption)
         {
           case 1: //Pass bet
-            float amt;
             cout << "Amount: ";
             cin >> amt;
             bank -= amt;
@@ -141,7 +142,6 @@ int main(int argc, char* argv[])
             break;
 
           case 2:  //Don't pass bet
-            float amt;
             cout << "Amount: ";
             cin >> amt;
             bank -= amt;
