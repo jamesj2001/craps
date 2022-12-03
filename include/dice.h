@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef DICE_H
+#define DICE_H
 
 class Dice
 {
@@ -12,3 +13,5 @@ class Dice
     int getDie1();
     int getDie2();
 };
+
+#endif

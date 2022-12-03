@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef TABLE_H
+#define TABLE_H
 
 class Table
 {
@@ -13,3 +14,5 @@ public:
   void printTable();
   void clear(int);
 };
+
+#endif
