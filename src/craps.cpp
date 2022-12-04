@@ -7,18 +7,18 @@ using namespace std;
 
 void printOptions()
 {
-  cout << "Choose an option..." << endl << "a. Roll" << endl << 
-                                           "b. Place Bet" << endl <<
-                                           "c. Print Table" << endl <<
-                                           "d. Print Last Dice Roll" << endl <<
-                                           "q. Quit" << endl;
-  cout << "Option:";
+  cout << "\nChoose an option..." << endl << "\ta. Roll" << endl << 
+                                           "\tb. Place Bet" << endl <<
+                                           "\tc. Print Table" << endl <<
+                                           "\td. Print Last Dice Roll" << endl <<
+                                           "\n\tq. Quit" << endl;
+  cout << "\nOption:";
 }
 
 void printAvailableBets()
 {
-  cout << "Select a type of bet..." << endl << "1. Pass" << endl <<
-                                               "2. Don't Pass" << endl; 
+  cout << "\nSelect a type of bet..." << endl << "\t1. Pass" << endl <<
+                                               "\t2. Don't Pass" << endl; 
 }
 
 int main(int argc, char* argv[])
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
  
   while(option != 'q' && option != 'Q')
   {
-    cout << "Bank is $" << bank;
+    cout << "\nBank is $" << bank;
     printOptions();
 
     cin >> option;
@@ -72,6 +72,9 @@ int main(int argc, char* argv[])
 
            if (roll == 7)
            {
+              pointOn = false;
+              point = 0;
+
               if (table -> getPassLine() > 0)
                 {table -> clear(0);}
 
@@ -153,9 +156,9 @@ int main(int argc, char* argv[])
       case 'c':
       case 'C':
         if (pointOn)
-          {cout << "Point is " << point << endl;}
+          {cout << "\nPoint is " << point << endl;}
         else
-          {cout << "Point is off" << endl;}
+          {cout << "\nPoint is off" << endl;}
         table -> printTable();
         break;
     }

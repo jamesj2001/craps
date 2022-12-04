@@ -32,7 +32,7 @@ void Table::betDontPassBar(float amt)
 void Table::printTable()
 {
   float total = 0;
-  cout << "Pass Line:\t$" << passLine << endl;
+  cout << "\nPass Line:\t$" << passLine << endl;
   total += passLine;
   cout << "Don't Pass Bar:\t$" << dontPassBar << endl << endl;
   cout << "Total bets in play:\t$" << total << endl;
